@@ -1,5 +1,7 @@
 # Internship Report – Stage d'Entreprise
 
+![Cover Page](./images/cover_screenshot.png)
+
 ## Overview
 
 This repository contains the LaTeX source files for my internship report.  
