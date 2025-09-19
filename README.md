@@ -1,6 +1,8 @@
 # Internship Report – Stage d'Entreprise
 
-![Cover Page](./images/cover_screenshot.png)
+<div align="center">
+  <img src="./images/cover_screenshot.png" alt="Cover Page" width="400"/>
+</div>
 
 ## Overview
 
