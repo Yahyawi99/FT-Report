@@ -20,9 +20,10 @@
 
 
 % Page margins
-\geometry{top=1.5cm,bottom=.5cm,left=1cm,right=1cm}
+\geometry{top=2cm,bottom=1.75cm,left=1cm,right=1cm}
 % Colors
 \definecolor{ftRed}{RGB}{204,0,0}
+\definecolor{ftBlue}{RGB}{0,0,204}
 % Bibliography style
 \bibliographystyle{IEEEtran}
 
@@ -42,9 +43,9 @@
     \let\addcontentsline\oldaddcontentsline
     \endgroup
     \clearpage
+    \renewcommand{\listfigurename}{Liste des Figures}
+    \pagestyle{plain} 
     \listoffigures
-    \clearpage
-    \listoftables
     \clearpage
 
     \input{front-matter/abréviations.tex}
@@ -52,6 +53,9 @@
 % ===== Main matter =====
 \pagenumbering{arabic}
     \input{chapters/introduction.tex}
+    \clearpage
+
+    \input{chapters/chapitre_1.tex}
     \clearpage
 
 % \chapter{Contexte général}
