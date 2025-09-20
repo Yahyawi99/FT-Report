@@ -6,7 +6,7 @@
 \usepackage[french,english]{babel}
 \usepackage{graphicx}
 \usepackage{geometry}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath,amssymb}
 \usepackage{longtable}
 \usepackage{listings}
@@ -16,7 +16,9 @@
 \usepackage{tcolorbox}
 \usepackage{minitoc}
 \usepackage{lmodern}       
-\usepackage{tocbibind}      
+\usepackage{tocbibind} 
+\usepackage{float}
+
 
 
 % Page margins
@@ -56,6 +58,9 @@
     \clearpage
 
     \input{chapters/chapitre_1.tex}
+    \clearpage
+
+    \input{chapters/chapitre_2.tex}
     \clearpage
 
 % \chapter{Contexte général}
