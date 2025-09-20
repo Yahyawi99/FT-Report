@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,oneside,a4paper]{book}
 
 % --- Packages ---
 \usepackage[utf8]{inputenc}
@@ -14,6 +14,11 @@
 \usepackage{xcolor}
 \usepackage{changepage}   
 \usepackage{tcolorbox}
+\usepackage{minitoc}
+\usepackage{lmodern}       
+\usepackage{tocbibind}      
+\usepackage{array} 
+
 
 % Page margins
 \geometry{top=1.5cm,bottom=.5cm,left=1cm,right=1cm}
@@ -22,30 +27,34 @@
 \bibliographystyle{IEEEtran}
 
 \begin{document}
+\definecolor{ftRed}{RGB}{204,0,0}
 
-% --- Cover ---
-\input{front-matter/cover.tex}
+% ===== Front matter =====
+\pagenumbering{gobble}
 
-% --- Dédicaces ---
-\input{front-matter/dédicaces.tex}
+    \input{front-matter/cover.tex}
+    \input{front-matter/dédicaces.tex}
+    \input{front-matter/remerciements.tex}
 
-% --- Remerciements ---
-\input{front-matter/remerciements.tex}
+    \begingroup
+    \let\oldaddcontentsline\addcontentsline
+    \renewcommand{\addcontentsline}[3]{}
+    \tableofcontents
+    \let\addcontentsline\oldaddcontentsline
+    \endgroup
+    \clearpage
+    \listoffigures
+    \clearpage
+    \listoftables
+    \clearpage
 
+    \input{front-matter/abréviations.tex}
 
+% ===== Main matter =====
+\pagenumbering{arabic}
+    \input{chapters/introduction.tex}
+    \clearpage
 
-% \tableofcontents
-% \listoffigures
-% \listoftables
-
-% \chapter*{Liste des abréviations}
-% \addcontentsline{toc}{chapter}{Liste des abréviations}
-% \begin{tabular}{ll}
-% GLSI & Génie Logiciel et Systèmes d’Information \\
-% GTR & Génie des Télécommunications et Réseaux \\
-% \end{tabular}
-
-% % --- MAIN CONTENT ---
 % \chapter{Contexte général}
 % \section{Organisme d’accueil}
 % \section{Étude et critique de l’existant}
@@ -76,8 +85,8 @@
 % \addcontentsline{toc}{chapter}{Conclusion générale}
 % Texte de conclusion...
 
-% % --- BIBLIOGRAPHY ---
-% \bibliography{main}
+% --- BIBLIOGRAPHY ---
+\bibliography{main}
 
 % % --- APPENDICES ---
 % \appendix
