@@ -38,12 +38,8 @@
     \input{front-matter/dédicaces.tex}
     \input{front-matter/remerciements.tex}
 
-    \begingroup
-    \let\oldaddcontentsline\addcontentsline
-    \renewcommand{\addcontentsline}[3]{}
+    \renewcommand{\contentsname}{Table des matières}
     \tableofcontents
-    \let\addcontentsline\oldaddcontentsline
-    \endgroup
     \clearpage
     \renewcommand{\listfigurename}{Liste des Figures}
     \pagestyle{plain} 
@@ -61,6 +57,9 @@
     \clearpage
 
     \input{chapters/chapitre_2.tex}
+    \clearpage
+
+    \input{chapters/chapitre_3.tex}
     \clearpage
 
 % \chapter{Contexte général}
