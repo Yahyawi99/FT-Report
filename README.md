@@ -13,10 +13,6 @@ The report describes the tasks I performed during my 6-month internship and docu
 
 You can compile the report using **VS Code with LaTeX Workshop** or directly on **Overleaf**.
 
-## Notes
-
-- The report focuses on internship tasks, not a specific project.
-
 ## Author
 
 **Yassine Yahyawi**  
